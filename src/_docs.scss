@@ -1,0 +1,31 @@
+// examples
+.bs-example {
+  img {
+    border: 1px solid hsl(0,0%,90%);
+  }
+}
+
+// sidebar
+.bs-sidebar {
+  @media #{$min-768} {
+    padding-left: 0;
+  }
+
+  .nav {
+    > li > a {
+      &:hover, &:focus {
+        color: $primary-color;
+        border-left-color: transparent;
+      }
+    }
+
+    > .active {
+      > a,
+      &:hover > a,
+      &:focus > a {
+        color: $primary-color;
+        border-left-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.highlight {
+  width: 100%;
+  background-color: #333;
+  padding: 0;
+  border-radius: 0;
+
+  pre {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+
+  pre::-webkit-scrollbar {
+    width: .75em;
+    height: .75em;
+    z-index: 2000;
+  }
+
+  pre::-webkit-scrollbar-track-piece {
+    background: hsla(0,0%,55%,0);
+  }
+
+  pre::-webkit-scrollbar-thumb {
+    background: hsl(0,0%,40%);
+  }
+
+  pre:hover::-webkit-scrollbar-thumb {
+    background: hsl(0,0%,60%);
+  }
+
+  pre {
+    font-family: 'Source Code Pro';
+    font-weight: 500;
+    font-size: 0.85em;
+    /*color: hsl(0,0%,70%);*/
+    padding: 1em 1em .5em 1em;
+  }
+
+  pre code {
+    /*color: hsl(0,0%,70%);*/
+    color: transparent;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+  }
+
+  pre .nt {
+    color: #2DAEBF;
+  }
+
+  pre .s {
+    color: #fff;
+  }
+}

@@ -1,0 +1,17 @@
+// compass mixins
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/box-shadow';
+
+// partials
+@import 'variables';
+@import 'general';
+@import 'typography';
+@import 'buttons';
+@import 'navbar';
+@import 'images';
+@import 'tables';
+@import 'callouts';
+@import 'highlight';
+@import 'docs';

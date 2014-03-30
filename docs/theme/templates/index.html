@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="img/apple-touch-icon-144x144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+  <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/icons/favicon.ico" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/buddycloud-styles.min.css" type="text/css" />
+  {% block morestyles %} {% endblock %}
+</head>
+<body>
+  <!-- Identity
+  ================================================== -->
+  {% include 'style-guide/identity.html' %}
+
+  <!-- Typography
+  ================================================== -->
+  {% include 'style-guide/typography.html' %}
+
+  <!-- Code
+  ================================================== -->
+  {% include 'style-guide/code.html' %}
+
+  <!-- Tables
+  ================================================== -->
+  {% include 'style-guide/tables.html' %}
+
+  <!-- Buttons
+  ================================================== -->
+  {% include 'style-guide/buttons.html' %}
+
+  <!-- Images
+  ================================================== -->
+  {% include 'style-guide/images.html' %}
+
+  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+  <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+  <script src="{{ SITEURL }}/theme/js/highlight.pack.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('pre:not(pre:has(code))').each(function(i, e) {
+        hljs.highlightBlock(e);
+      });
+      $('pre code').each(function(i, e) {
+        hljs.highlightBlock(e);
+      });
+    });
+  </script>
+</html>

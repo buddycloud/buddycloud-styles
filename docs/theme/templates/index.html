@@ -6,41 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
   <link href="img/apple-touch-icon-144x144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed">
   <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/icons/favicon.ico" />
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/bower_components/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css" type="text/css" />
   {% block morestyles %} {% endblock %}
 </head>
 <body>
-  <!-- Identity
-  ================================================== -->
-  {% include 'style-guide/identity.html' %}
+  {% include 'partials/header.html' %}
 
-  <!-- Typography
-  ================================================== -->
-  {% include 'style-guide/typography.html' %}
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        {% include 'partials/sidebar.html' %}
+      </div>
+      <div class="col-md-9 col-sm-9">
+        {% include 'partials/style-guide.html' %}
+      </div>
+    </div>
+  </div>
 
-  <!-- Code
-  ================================================== -->
-  {% include 'style-guide/code.html' %}
-
-  <!-- Tables
-  ================================================== -->
-  {% include 'style-guide/tables.html' %}
-
-  <!-- Buttons
-  ================================================== -->
-  {% include 'style-guide/buttons.html' %}
-
-  <!-- Images
-  ================================================== -->
-  {% include 'style-guide/images.html' %}
-
-  <script src="{{ SITEURL }}/theme/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="{{ SITEURL }}/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="{{ SITEURL }}/theme/bower_components/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
+  <script src="{{ SITEURL }}/theme/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="{{ SITEURL }}/theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="{{ SITEURL }}/theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
 </html>

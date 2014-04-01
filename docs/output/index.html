@@ -6,17 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
   <link href="img/apple-touch-icon-144x144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed">
   <link rel="shortcut icon" href="/theme/img/icons/favicon.ico" />
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/theme/bower_components/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="/theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" type="text/css" />
  </head>
 <body>
-  <!-- Identity
-  ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">buddycloud</a>
+    </div>
+  </div>
+</div>
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+<div class="bs-docs-sidebar hidden-print affix-top">
+  <ul class="nav bs-docs-sidenav list-unstyled">
+    <li class="active">
+      <a data-scroll data-url href="#identity">Identity</a>
+      <ul class="nav">
+        <li class="active"><a data-scroll data-url href="#identity-logo">Logo</a></li>
+        <li><a data-scroll data-url href="#identity-icons">Icons</a></li>
+        <li><a data-scroll data-url href="#identity-colors">Colors</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a data-scroll data-url href="#type">Typography</a>
+      <ul class="nav">
+        <li><a data-scroll data-url href="#type-headings">Headings</a></li>
+        <li><a data-scroll data-url href="#type-body-copy">Body copy</a></li>
+        <li><a data-scroll data-url href="#type-emphasis">Emphasis</a></li>
+        <li><a data-scroll data-url href="#type-abbreviations">Abbreviations</a></li>
+        <li><a data-scroll data-url href="#type-addresses">Addresses</a></li>
+        <li><a data-scroll data-url href="#type-blockquotes">Blockquotes</a></li>
+        <li><a data-scroll data-url href="#type-lists">Lists</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a data-scroll data-url href="#code">Code</a>
+      <ul class="nav">
+        <li><a data-scroll data-url href="#code-inline">Inline code</a></li>
+        <li><a data-scroll data-url href="#code-user-input">User input</a></li>
+        <li><a data-scroll data-url href="#code-block">Blocks of code</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a data-scroll data-url href="#tables">Tables</a>
+      <ul class="nav">
+        <li><a data-scroll data-url href="#tables-example">Basic example</a></li>
+        <li><a data-scroll data-url href="#tables-striped">Striped rows</a></li>
+        <li><a data-scroll data-url href="#tables-bordered">Bordered table</a></li>
+        <li><a data-scroll data-url href="#tables-hover-rows">Hover rows</a></li>
+        <li><a data-scroll data-url href="#tables-condensed">Condensed table</a></li>
+        <li><a data-scroll data-url href="#tables-contextual-classes">Contextual classes</a></li>
+        <li><a data-scroll data-url href="#tables-responsive">Responsive tables</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a data-scroll data-url href="#buttons">Buttons</a>
+      <ul class="nav">
+        <li><a data-scroll data-url href="#buttons-options">Options</a></li>
+        <li><a data-scroll data-url href="#buttons-sizes">Sizes</a></li>
+        <li><a data-scroll data-url href="#buttons-active">Active state</a></li>
+        <li><a data-scroll data-url href="#buttons-disabled">Disabled state</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a data-scroll data-url href="#images">Images</a>
+      <ul class="nav">
+        <li><a data-scroll data-url href="#images-standart">Standart Image</a></li>
+        <li><a data-scroll data-url href="#images-credits">Image Credits</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>      </div>
+      <div class="col-md-9 col-sm-9">
+<!-- Identity
+================================================== -->
 <div class="bs-docs-section">
   <h1 id="identity" class="page-header">Identity</h1>
 
@@ -227,8 +307,8 @@
     </table>
   </div>
 </div>
-  <!-- Typography
-  ================================================== -->
+<!-- Typography
+================================================== -->
 <div class="bs-docs-section">
   <h1 id="type" class="page-header">Typography</h1>
 
@@ -607,8 +687,8 @@
     <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
   </div>
 </div>
-  <!-- Code
-  ================================================== -->
+<!-- Code
+================================================== -->
 <div class="bs-docs-section">
   <h1 id="code" class="page-header">Code</h1>
 
@@ -645,8 +725,8 @@
   <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
 </div>
 
-  <!-- Tables
-  ================================================== -->
+<!-- Tables
+================================================== -->
 <div class="bs-docs-section">
   <h1 id="tables" class="page-header">Tables</h1>
 
@@ -1090,8 +1170,8 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 </div>
-  <!-- Buttons
-  ================================================== -->
+<!-- Buttons
+================================================== -->
 <div class="bs-docs-section">
   <h1 id="buttons" class="page-header">Buttons</h1>
 
@@ -1259,8 +1339,8 @@
     <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a Firefox bug</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p>
   </div>
 </div>
-  <!-- Images
-  ================================================== -->
+<!-- Images
+================================================== -->
 <div class="bs-docs-section">
   <h1 class="page-header" id="images">Images</h1>
 
@@ -1280,8 +1360,8 @@
 
   <div class="highlight">
     <pre><code class="html"><span class="nt">&lt;figure&gt;</span>
-&lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt;
-<span class="nt">&lt;figcaption&gt;</span>A sample figure caption.<span class="nt">&lt;/figcaption&gt;</span>
+  &lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt;
+  <span class="nt">&lt;figcaption&gt;</span>A sample figure caption.<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code>
 </pre>
@@ -1303,14 +1383,17 @@
 
   <div class="highlight">
     <pre><code class="html"><span class="nt">&lt;figure class="credits"&gt;</span>
-&lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt;
-<span class="nt">&lt;figcaption&gt;</span>Some sample image credits.<span class="nt">&lt;/figcaption&gt;</span>
+  &lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt;
+  <span class="nt">&lt;figcaption&gt;</span>Some sample image credits.<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code>
 </pre>
   </div>
-</div>
-  <script src="/theme/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/theme/bower_components/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
+</div>      </div>
+    </div>
+  </div>
+
+  <script src="/theme/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
 </html>

@@ -46,20 +46,36 @@ module.exports = function (grunt) {
     },
 
     cssmin: {
-      minify: {
+      dist: {
         expand: true,
         cwd: 'dist/css/',
         src: ['*.css', '!*.min.css'],
         dest: 'dist/css/',
         ext: '.min.css'
+      },
+      dev: {
+        expand: true,
+        cwd: 'docs/theme/static/vendor/buddycloud-styles/dist/<%= dirs.css %>/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'docs/theme/static/vendor/buddycloud-styles/dist/<%= dirs.css %>/',
+        ext: '.min.css'
       }
     },
 
     compass: {
-      dev: {
+      dist: {
         options: {
           sassDir: 'src/<%= dirs.sass %>',
           cssDir: 'dist/<%= dirs.css %>',
+          imagesDir: 'src/<%= dirs.img %>',
+          relativeAssets: true,
+          outputStyle: 'expanded'
+        }
+      },
+      dev: {
+        options: {
+          sassDir: 'src/<%= dirs.sass %>',
+          cssDir: 'docs/theme/static/vendor/buddycloud-styles/dist/<%= dirs.css %>',
           imagesDir: 'src/<%= dirs.img %>',
           relativeAssets: true,
           outputStyle: 'expanded'
@@ -74,16 +90,18 @@ module.exports = function (grunt) {
       sass: {
         files: 'src/sass/**/*',
         tasks: [
-          'compass:dev'
+          'compass:dev',
+          'cssmin:dev'
         ]
       },
       js: {
         files: [
-          'src/<%= dirs.js %>/plugins.js',
-          'src/<%= dirs.js %>/main.js'
+          'src/<%= dirs.js %>/**/*.js'
         ],
         tasks: [
-          'concat'
+          'copy:dist',
+          'uglify',
+          'copy:dev'
         ]
       }
     },
@@ -98,6 +116,16 @@ module.exports = function (grunt) {
             dest: 'dist/'
           }
         ]
+      },
+      dev: {
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**/*.js'],
+            dest: 'docs/theme/static/vendor/buddycloud-styles/dist/'
+          }
+        ]
       }
     }
 
@@ -107,11 +135,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'copy',
-    'compass:dev',
-    'cssmin',
+    'copy:dist',
+    'compass:dist',
+    'cssmin:dist',
     // 'concat',
-    'uglify',
+    'uglify'
   ]);
 
 };

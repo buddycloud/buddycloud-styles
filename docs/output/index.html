@@ -11,8 +11,8 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/theme/css/buddycloud-styles.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/bower_components/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
  </head>
 <body>
   <!-- Identity
@@ -1310,17 +1310,7 @@
 </pre>
   </div>
 </div>
-  <script src="/theme/js/jquery.min.js"></script>
-  <script src="/theme/js/bootstrap.min.js"></script>
-  <script src="/theme/js/highlight.pack.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('pre:not(pre:has(code))').each(function(i, e) {
-        hljs.highlightBlock(e);
-      });
-      $('pre code').each(function(i, e) {
-        hljs.highlightBlock(e);
-      });
-    });
-  </script>
+  <script src="/theme/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/theme/bower_components/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
 </html>

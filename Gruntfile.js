@@ -38,8 +38,8 @@ module.exports = function (grunt) {
       target: {
         files: {
           'dist/<%= dirs.js %>/buddycloud-styles.min.js': [
-            'src/<%= dirs.js %>/buddycloud-styles.js',
-            'src/<%= dirs.js %>/vendor/highlight.min.js'
+            'src/<%= dirs.js %>/vendor/highlight.min.js',
+            'src/<%= dirs.js %>/buddycloud-styles.js'
           ]
         }
       }

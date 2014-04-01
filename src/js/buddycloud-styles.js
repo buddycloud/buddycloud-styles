@@ -46,3 +46,12 @@ setTimeout(function () {
 setTimeout(function () {
   $('.bs-top').affix()
 }, 100)
+
+$(function() {
+  $('pre:not(pre:has(code))').each(function(i, e) {
+    hljs.highlightBlock(e);
+  })
+  $('pre code').each(function(i, e) {
+    hljs.highlightBlock(e);
+  })
+})

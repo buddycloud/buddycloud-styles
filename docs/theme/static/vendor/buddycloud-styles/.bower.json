@@ -23,11 +23,11 @@
     "bootstrap": "3.1.1"
   },
   "homepage": "https://github.com/buddycloud/buddycloud-styles",
-  "_release": "a9cc622a20",
+  "_release": "5d62a689bd",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "a9cc622a2010b233b544ef9a83bad6622cec40d5"
+    "commit": "5d62a689bd9a29155cc7a428b33a2466d1018f93"
   },
   "_source": "git://github.com/buddycloud/buddycloud-styles.git",
   "_target": "*",

@@ -12,7 +12,13 @@ var navHeight = $('.navbar').outerHeight(true) + 10
 
 $body.scrollspy({
   target: '.bs-docs-sidebar',
-  // offset: navHeight
+  offset: 70
+})
+
+$body.on('click', '.bs-docs-sidebar a', function (e) {
+  setTimeout(function() {
+    $window.scrollTop($window.scrollTop() - 65)
+  }, 1);
 })
 
 $window.on('load', function () {
@@ -27,20 +33,8 @@ $('.bs-docs-container [href=#]').click(function (e) {
 setTimeout(function () {
   var $sideBar = $('.bs-docs-sidebar')
 
-  $sideBar.affix({
-    offset: {
-      top: function () {
-        var offsetTop      = $sideBar.offset().top
-        var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
-        var navOuterHeight = $('.bs-docs-nav').height()
-
-        return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-      },
-      bottom: function () {
-        return (this.bottom = $('.bs-docs-footer').outerHeight(true))
-      }
-    }
-  })
+  $sideBar.affix();
+  $(document).on('')
 }, 100)
 
 setTimeout(function () {

@@ -10,9 +10,13 @@
 }
 
 // sidebar
-.bs-sidebar {
+.bs-docs-sidebar {
   @media #{$min-768} {
     padding-left: 0;
+  }
+
+  &.affix {
+    top: 90px;
   }
 
   .nav {

@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = u'en'
 
+DIRECT_TEMPLATES = ['index']
+
 THEME = 'theme'
 
 # Feed generation is usually not desired when developing

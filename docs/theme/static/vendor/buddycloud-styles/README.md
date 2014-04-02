@@ -1,13 +1,11 @@
 buddycloud-styles
 =================
 
-WIP
----
-
+Install it via bower using:
 
 `bower install buddycloud/buddycloud-styles`
 
-add
+Then add the stylesheets and scripts to the page:
 
 ```html
 <link rel="stylesheet" href="{{ bower directory }}/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
@@ -15,7 +13,7 @@ add
 ```
 
 ```html
-<script src="{{ bower directory }}/vendor/jquery/dist/jquery.min.js"></script>
-<script src="{{ bower directory }}/bootstrap/dist/css/bootstrap.min.js"></script>
+<script src="{{ bower directory }}/jquery/dist/jquery.min.js"></script>
+<script src="{{ bower directory }}/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{ bower directory }}/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
 ```

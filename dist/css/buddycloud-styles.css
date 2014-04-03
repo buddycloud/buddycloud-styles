@@ -1945,19 +1945,23 @@ body {
 a {
   outline: 0;
 }
-
 /* line 12, ../../src/sass/_general.scss */
+a:active, a:focus {
+  outline: 0;
+}
+
+/* line 17, ../../src/sass/_general.scss */
 pre {
   border-radius: 0;
 }
 
-/* line 16, ../../src/sass/_general.scss */
+/* line 21, ../../src/sass/_general.scss */
 code {
   color: #2daebf;
   background-color: rgba(45, 174, 191, 0.075);
 }
 
-/* line 21, ../../src/sass/_general.scss */
+/* line 26, ../../src/sass/_general.scss */
 img {
   max-width: 100%;
 }

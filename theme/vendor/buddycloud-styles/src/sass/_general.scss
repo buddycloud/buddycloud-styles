@@ -5,6 +5,10 @@ body {
   padding-top: 70px; // we are using .navbar-fixed-top
 }
 
+a {
+  outline: 0;
+}
+
 pre {
   border-radius: 0;
 }
